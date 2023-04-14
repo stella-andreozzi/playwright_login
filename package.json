@@ -1,0 +1,21 @@
+{
+  "name": "playwright_login",
+  "version": "1.0.0",
+  "description": "Typescript + Playwright test repo",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stella-andreozzi/playwright_login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stella-andreozzi/playwright_login/issues"
+  },
+  "homepage": "https://github.com/stella-andreozzi/playwright_login#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.32.3"
+  }
+}
