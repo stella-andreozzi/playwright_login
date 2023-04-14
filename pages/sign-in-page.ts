@@ -15,7 +15,7 @@ export class CodereCABASignPage {
   }
 
   async inputUsername() {
-    await this.usernameInput.fill('andreozzi.stella@gmail.com');
+    await this.usernameInput.fill('example@gmail.com');
   }
 
   async inputPassword() {
