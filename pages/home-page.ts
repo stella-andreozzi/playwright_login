@@ -1,4 +1,5 @@
 // Codere-CABA-Home-page.ts
+// Following POM design pattern, this page will contain all the objects and methods to interact with the Codere Home Page.
 import { expect, Locator, Page } from '@playwright/test';
 
 export class CodereCABAHomePage {
@@ -9,25 +10,25 @@ export class CodereCABAHomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.okCookies = page.getByRole('button', { name: 'OK' });
-    this.accessButton = page.getByRole('button', { name: 'Acceder' });
-    this.signinUsername = page.getByRole('button', { name: 'stellaand' });
+    this.okCookies = page.getByRole('button', { name: 'OK' }); // confirm cookies OK button locator
+    this.accessButton = page.getByRole('button', { name: 'Acceder' }); // Access button locator 
+    this.signinUsername = page.getByRole('button', { name: 'stellaand' }); // Username displayed in Home page after login
   }
 
-  async goto() {
+  async goto() { //method to go to codere URL
     await this.page.goto('https://m.caba.codere.bet.ar/deportes/#/HomePage');
     await expect(this.page).toHaveTitle(/Codere Apuestas/);
   }
 
-  async skipCookies() {
+  async skipCookies() { // method to confirm cookies
     await this.okCookies.click();
   }
 
-  async clickaccessButton() {
+  async clickaccessButton() { // method to click access button
     await this.accessButton.click();
   }
 
-  async verifiedUsername(){
+  async verifiedUsername(){ // method to verify the username after login
     const username = await this.signinUsername.textContent();
     console.log(username);
   }

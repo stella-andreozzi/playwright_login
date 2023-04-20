@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-// We use POM design patter:
+// We use POM design pattern, so here we are importing those pages.
 import { CodereCABAHomePage } from '../pages/home-page'; // POM for Home Screen
 import { CodereCABASignPage } from '../pages/sign-in-page'; // POM for Sign in modal Screen
 
@@ -33,3 +33,15 @@ test.describe('Successfull login with valid user', () => {
     await codereCABASignPage.loginConfirmation();
   });
 });
+
+
+  //List of test cases we can automate for sign in:
+  // 
+  // 1. Sign in with invalid username and valid password -> verify error message
+  // 2. Sign in with valid username and invalid password -> verify error message
+  // 3. Sign in with invalid username and invalid password -> verify error message
+  // 4. Sign in with a non-registrated user -> verify error message
+  // 5. Sign in with empty username -> verify error message
+  // 6. Sign in with empty password -> verify error message
+  // 7. Sign in with special characters -> verify error message
+  // 8. Sign in with valid credentials in different browsers -> validate that the session is still open.
